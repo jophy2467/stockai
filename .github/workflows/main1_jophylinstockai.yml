@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'jophylinstockai'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E937931EF9904A89809CE13A30A7FDCA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE}}
