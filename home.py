@@ -98,7 +98,7 @@ with tabs[0]:
             font-family: 'Space Grotesk';
             font-size: 20px;
             margin-top: 0.5em;
-            margin-bottom: 2em;
+            margin-bottom: 1em;
         }
     </style>
     """
@@ -108,7 +108,13 @@ with tabs[0]:
         <div class="section">
             <div class="subtitle">Background:</div>
             <ul>
-                <li>Inspire the next generation of AI innovators.</li>
+                Hey there! I'm Jophy, a passionate high school student currently navigating the world of science, engineering, and finance. As a student enrolled in the Science and Engineering Magnet Program at Manalapan High School (Class of 2026), I've delved deep into challenging courses, fostering my love for STEM.
+            </ul>
+            <ul>
+                Driven by a keen interest in biomedical engineering and a flair for finance, I strive to merge the best of both worlds. My journey isn't just confined to the classroom; I actively engage in a multitude of activities, from teaching coding at an online computer science academy to contributing my insights at hackathons.
+            </ul>
+            <ul>
+                Beyond academics and STEM, you'll find me exploring the realms of piano and violin performance, where I've achieved notable milestones like the ABRSM Piano and Violin Performance Grade 8. Join me on this journey as I balance the intricacies of science, technology, and my love for the arts!
             </ul>
         </div>
     """, unsafe_allow_html=True)
@@ -117,7 +123,7 @@ with tabs[0]:
         <div class="section">
             <div class="subtitle">Passions and Interests:</div>
             <ul>
-                <li>Open to all students, regardless of their previous experience with programming or AI.</li>
+                My heart lies in the realms of biomedical engineering and finance. The prospect of applying engineering principles to solve medical challenges fascinates me. Simultaneously, I'm drawn to the intricacies of finance, envisioning a future where I can merge both disciplines for innovative solutions in healthcare.
             </ul>
         </div>
     """, unsafe_allow_html=True)
@@ -126,7 +132,13 @@ with tabs[0]:
         <div class="section">
             <div class="subtitle">Academic Focus:</div>
             <ul>
-                <li>12-week program offered throughout the year.</li>
+                Navigating the challenging landscape of the Science and Engineering Magnet Program at Manalapan High School, I've embarked on a journey of intellectual exploration and academic excellence. My commitment to mastering diverse subjects and pushing the boundaries of my understanding has shaped a focused academic trajectory. Here's a snapshot of the courses that have played a pivotal role in shaping my educational experience:
+                <li>AP Biology (2022-2023)</li>
+                <li>AP Microeconomics (2022-2023)</li>
+                <li>Computer Programming and Engineering Design (2022-2023)</li>
+                <li>AP Chemistry (2023-present)</li>
+                <li>AP Statistics (2023-present)</li>
+                <li>AP U.S. Government and Politics (2023-present)</li>
             </ul>
         </div>
     """, unsafe_allow_html=True)
@@ -135,7 +147,7 @@ with tabs[0]:
         <div class="section">
             <div class="subtitle">Projects:</div>
             <ul>
-                <li>Project-driven learning, wher</li>
+                I've undertaken various projects, ranging from utilizing Artificial Intelligence for climate change and sustainability to creating innovative applications. For detailed information, please refer to the "Projects I've Worked On" tab.
             </ul>
         </div>
     """, unsafe_allow_html=True)
@@ -144,7 +156,7 @@ with tabs[0]:
         <div class="section">
             <div class="subtitle">Achievements and Awards:</div>
             <ul>
-                <li>pts that students learn.
+                My journey has been marked by recognition and I enjoy participating in competitions to broaden my skills and learn. For a comprehensive list, explore the "Achievements and Awards" tab.
             <u1>
         </div>
     """,  unsafe_allow_html=True)
@@ -153,7 +165,7 @@ with tabs[0]:
         <div class="section">
             <div class="subtitle">Extracirricular Activities:</div>
             <ul>
-                <li>By the end of the program, students 
+                Engaging in diverse extracurriculars, my activities range from volunteering in non-profits to teaching children to code. A glimpse of my involvement can be found in the "Extracurricular Activities" tab.
             </ul>
         </div>
     """,  unsafe_allow_html=True)
@@ -162,7 +174,7 @@ with tabs[0]:
         <div class="section">
             <div class="subtitle">School Activities:</div>
             <ul>
-                <li>By the end of the program, students 
+                Within my school, I'm involved in various activities. Explore the "School Activities" tab for a detailed overview.
             </ul>
         </div>
     """,  unsafe_allow_html=True)
@@ -171,8 +183,16 @@ with tabs[0]:
         <div class="section">
             <div class="subtitle">Future Goals:</div>
             <ul>
-                <li>By the end of the program, students 
+                Looking ahead, I aspire to pursue a career in biomedical engineering, combining my passion for technology with a commitment to improving healthcare solutions. Alongside biomedical engineering, I also aim to major in finance, leveraging financial knowledge to contribute to the strategic development of innovative biomedical technologies.
             </ul>
+        </div>
+    """,  unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class="section">
+            <div class="subtitle">Contact me:</div>
+            <ul>
+                Feel free to reach out to me via email at jophy2467@gmail.com. I'm excited to connect and discuss shared interests, collaborations, or any inquiries you may have.
         </div>
     """,  unsafe_allow_html=True)
 
