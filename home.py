@@ -9,72 +9,114 @@ sys.path.insert(0, DIR)
 #from streamlit_style import apply_style
 
 # App title and header
-st.set_page_config(page_title="Programs. ", page_icon=None, layout="wide", initial_sidebar_state="auto")
+st.set_page_config(page_title="Jophy Lin", page_icon=None, layout="wide", initial_sidebar_state="collapsed")
+
 #apply_style()
 st.markdown("""
     <style>
-            .block-container {
+        .block-container {
             padding-top: 1rem;
-            padding-bottom: 0rem;
-            padding-right: 1rem;
-            padding-left: 1rem;
-            }
+            padding-bottom: 1rem;
+            padding-right: 3rem;
+            padding-left: 3rem;
+            color: #FFFFFF; /* White */
+        }
     </style>
 """, unsafe_allow_html=True)
+
 
 ######################################## tabs ########################################
 listTabs =["About Me", "Projects I've Worked On", "Achievements and Awards", "Extracirricular Activties", "School Activities"]
 
-whitespace = 9
-st.markdown("#### Hi, I'm Jophy!")
+whitespace = 3
+st.markdown("""
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+        .block-container {
+            padding-top: 1rem;
+            padding-bottom: 0rem;
+            padding-right: 3rem;
+            padding-left: 3rem;
+            color: #FFFFFF; /* White */
+            font-family: 'Courgette', cursive;
+        }
+        .big-font {
+            font-size:60px !important;
+            font-family: 'Courgette', cursive;
+            margin-bottom: -2rem !important; 
+        }
+    </style>
+    <div class="big-font">Hi, I'm Jophy!</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+        .block-container {
+            padding-right: 3rem;
+            padding-left: 3rem;
+            color: #FFFFFF; /* White */
+            font-family: 'Courgette', cursive;
+        }
+        .small-font{
+            font-size: 30px !important;
+            font-family: 'Courgette';
+        }
+    </style>
+    <div class="small-font">Welcome to my website</div>
+""", unsafe_allow_html=True)
+
 ## Fills and centers each tab label with em-spaces
 tabs = st.tabs([s.center(whitespace,"\u2001") for s in listTabs])
 
 with tabs[0]:
-    st.markdown("##### About Me")
     style = """
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+        .block-container {
+            padding-right: 3rem;
+            padding-left: 3rem;
+            color: #FFFFFF; /* White */
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
         .title {
-            font-size: 36px;
+            font-family: 'Space Grotesk';
+            margin-top: -1.5rem !important;
+            font-size: 30px;
             font-weight: bold;
             padding-bottom: 0.5em;
         }
         .subtitle {
+            font-family: 'Space Grotesk';
             font-size: 24px;
             font-weight: bold;
             padding-bottom: 0.5em;
+            margin-bottom: -0.5em;
         }
         ul {
+            font-family: 'Space Grotesk';
+            font-size: 20px;
             margin-top: 0.5em;
-            margin-bottom: 0.5em;
+            margin-bottom: 2em;
         }
     </style>
     """
-
     st.markdown(style, unsafe_allow_html=True)
 
     st.markdown("""
-        <div class="title">AI Education Project Programs for Students</div>
-        <div class="subtitle">Project-Driven Learning for Real-World Applications</div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
         <div class="section">
-            <div class="subtitle">Goal:</div>
+            <div class="subtitle">Background:</div>
             <ul>
-                <li>Introduce middle/high school students to the exciting world of artificial intelligence and machine learning.</li>
                 <li>Inspire the next generation of AI innovators.</li>
-                <li>Develop critical thinking, problem-solving, and teamwork skills.</li>
-                <li>Prepare students for future challenges in the rapidly evolving tech industry.</li>
             </ul>
         </div>
     """, unsafe_allow_html=True)
 
     st.markdown("""
         <div class="section">
-            <div class="subtitle">Who:</div>
+            <div class="subtitle">Passions and Interests:</div>
             <ul>
-                <li>Middle school students who are interested in technology and want to learn about the applications of AI.</li>
                 <li>Open to all students, regardless of their previous experience with programming or AI.</li>
             </ul>
         </div>
@@ -82,53 +124,54 @@ with tabs[0]:
 
     st.markdown("""
         <div class="section">
-            <div class="subtitle">When We Teach:</div>
+            <div class="subtitle">Academic Focus:</div>
             <ul>
                 <li>12-week program offered throughout the year.</li>
-                <li>Flexible program that allows students to learn at their own pace and according to their own schedule.</li>
-                <li>Students can choose to take the program during the school year or over the summer.</li>
             </ul>
         </div>
     """, unsafe_allow_html=True)
 
     st.markdown("""
         <div class="section">
-            <div class="subtitle">How We Teach:</div>
+            <div class="subtitle">Projects:</div>
             <ul>
-                <li>Project-driven learning, where students learn by working on real-world projects.</li>
-                <li>Experienced instructors guide students through the process of building AI models using popular tools such as Python, TensorFlow, and Keras.</li>
-                <li>Incorporates interactive quizzes, games, and other activities to help reinforce concepts.</li>
-                <li>Emphasizes safety and ethics when working with AI, covering topics such as data privacy, bias, and the ethics of AI.</li>
-                <li>Teaches students how to safely use generative AI and chatbots, such as ChatGPT, while ensuring they understand the risks involved.</li>
+                <li>Project-driven learning, wher</li>
             </ul>
         </div>
     """, unsafe_allow_html=True)
 
     st.markdown("""
         <div class="section">
-            <div class="subtitle">What Will Students Learn:</div>
+            <div class="subtitle">Achievements and Awards:</div>
             <ul>
-                <li>Fundamentals of AI, including supervised and unsupervised learning, deep learning, computer vision, and natural language processing.</li>
-                <li>Valuable skills in problem-solving, critical thinking, and teamwork. In addition, they will have learned how to use popular AI tools, including TensorFlow and Keras, and how to safely use generative AI and chatbots.
-            </ul>
+                <li>pts that students learn.
+            <u1>
         </div>
     """,  unsafe_allow_html=True)
+
     st.markdown("""
         <div class="section">
-            <div class="subtitle">How We Teach:</div>
+            <div class="subtitle">Extracirricular Activities:</div>
             <ul>
-                <li>Our program is project-driven, which means that students learn by working on real-world projects. Our experienced instructors guide students through the process of building AI models using popular tools such as Python, TensorFlow, and Keras. We also incorporate interactive quizzes, games, and other activities to help reinforce the concepts that students learn.
-                </li><li>We understand that safety and ethics are important considerations when working with AI. That's why we place a strong emphasis on teaching students how to use AI safely and responsibly. We cover topics such as data privacy, bias, and the ethics of AI. We also teach students how to safely use generative AI and chatbots, such as ChatGPT, while ensuring they understand the risks involved.</li>
+                <li>By the end of the program, students 
             </ul>
         </div>
     """,  unsafe_allow_html=True)
 
     st.markdown("""
         <div class="section">
-            <div class="subtitle">What Will Students Learn:</div>
+            <div class="subtitle">School Activities:</div>
             <ul>
-                <li>By the end of the program, students will have gained a solid understanding of the fundamentals of AI, including supervised and unsupervised learning, deep learning, computer vision, and natural language processing. They will also have gained valuable skills in problem-solving, critical thinking, and teamwork. In addition, they will have learned how to use popular AI tools, including TensorFlow and Keras, and how to safely use generative AI and chatbots.
-                </li><li>Our AI education program for middle school students is designed to give students the knowledge and skills they need to succeed in the tech industry of tomorrow. We believe that by inspiring the next generation of AI innovators, we can help shape a better future for everyone.</li>
+                <li>By the end of the program, students 
+            </ul>
+        </div>
+    """,  unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class="section">
+            <div class="subtitle">Future Goals:</div>
+            <ul>
+                <li>By the end of the program, students 
             </ul>
         </div>
     """,  unsafe_allow_html=True)
