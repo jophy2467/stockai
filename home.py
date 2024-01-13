@@ -11,6 +11,7 @@ sys.path.insert(0, DIR)
 # App title and header
 st.set_page_config(page_title="Jophy Lin", page_icon=None, layout="wide", initial_sidebar_state="collapsed")
 
+# Rest of your code...
 #apply_style()
 st.markdown("""
     <style>
@@ -19,14 +20,32 @@ st.markdown("""
             padding-bottom: 1rem;
             padding-right: 3rem;
             padding-left: 3rem;
+            background-color: #FFB6C1; /* Baby Pink */
             color: #FFFFFF; /* White */
+        }
+        .tabs.tabItem {
+            color: #FF69B4 !important; /* Hot Pink */
+            background-color: transparent; /* Add this line if you want to ensure the background is transparent when not active */
+        }
+        .tabs.tabItem.active {
+            color: #FFB6C1 !important; /* Baby Pink */
+            background-color: red !important; /* Red background color for active tab */
+        }
+        .big-font {
+            font-size: 60px !important;
+            margin-bottom: -2rem !important;
+        }
+        .small-font {
+            font-size: 30px !important;
         }
     </style>
 """, unsafe_allow_html=True)
 
+   
+
 
 ######################################## tabs ########################################
-listTabs =["About Me", "Projects I've Worked On", "Achievements and Awards", "Extracirricular Activties", "School Activities"]
+listTabs =["About Me", "Projects I've Worked On", "Achievements and Awards", "Extracirricular Activities", "School Activities"]
 
 whitespace = 3
 st.markdown("""
@@ -41,11 +60,12 @@ st.markdown("""
             font-family: 'Courgette', cursive;
         }
         .big-font {
-            font-size:60px !important;
+            font-size:70px !important;
             font-family: 'Courgette', cursive;
             margin-bottom: -2rem !important; 
         }
     </style>
+
     <div class="big-font">Hi, I'm Jophy!</div>
 """, unsafe_allow_html=True)
 
