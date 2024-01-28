@@ -397,7 +397,7 @@ with tabs[4]:
             #if i + 1 < len(images):
                 #with col2:
                     #st.markdown(f'<img src="{images[i+1]}" style="border-radius: 20px; width: 220px">', unsafe_allow_html=True)
-            st.markdown("<br>", unsafe_allow_html=True)  # Add a line break after each pair of images
+        #st.markdown("<br>", unsafe_allow_html=True)  # Add a line break after each pair of images
             
     with col4:
         st.markdown("""
