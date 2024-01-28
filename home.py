@@ -11,403 +11,404 @@ sys.path.insert(0, DIR)
 # App title and header
 st.set_page_config(page_title="Jophy Lin", page_icon=None, layout="wide", initial_sidebar_state="collapsed")
 
-# Rest of your code...
-#apply_style()
-st.markdown("""
-    <style>
-        .block-container {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            padding-right: 3rem;
-            padding-left: 3rem;
-            background-color: #FFB6C1; /* Baby Pink */
-            color: #FFFFFF; /* White */
-        }
-        .tabs.tabItem {
-            color: #FF69B4 !important; /* Hot Pink */
-            background-color: transparent; /* Add this line if you want to ensure the background is transparent when not active */
-        }
-        .tabs.tabItem.active {
-            color: #FFB6C1 !important; /* Baby Pink */
-            background-color: red !important; /* Red background color for active tab */
-        }
-        .big-font {
-            font-size: 60px !important;
-            margin-bottom: -2rem !important;
-        }
-        .small-font {
-            font-size: 30px !important;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-
 ######################################## tabs ########################################
-listTabs =["About Me", "Projects I've Worked On", "Achievements and Awards", "Extracirricular Activities", "School Activities"]
-
-whitespace = 3
-st.markdown("""
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-        .block-container {
-            padding-top: 1rem;
-            padding-bottom: 0rem;
-            padding-right: 3rem;
-            padding-left: 3rem;
-            color: #FFFFFF; /* White */
-            font-family: 'Courgette', cursive;
-        }
-        .big-font {
-            font-size:70px !important;
-            font-family: 'Courgette', cursive;
-            margin-bottom: -2rem !important; 
-        }
-    </style>
-
-    <div class="big-font">Hi, I'm Jophy!</div>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-        .block-container {
-            padding-right: 3rem;
-            padding-left: 3rem;
-            color: #FFFFFF; /* White */
-            font-family: 'Courgette', cursive;
-        }
-        .small-font{
-            font-size: 30px !important;
-            font-family: 'Courgette';
-        }
-    </style>
-    <div class="small-font">Welcome to my website</div>
-""", unsafe_allow_html=True)
+listTabs =["Home", "About Me", "Projects I've Worked On", "Achievements and Awards", "Extracirricular/School Activities"]
+whitespace = 0
 
 ## Fills and centers each tab label with em-spaces
 tabs = st.tabs([s.center(whitespace,"\u2001") for s in listTabs])
 
+#"Home" tab
 with tabs[0]:
     style = """
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
-        .block-container {
-            padding-right: 3rem;
-            padding-left: 3rem;
-            color: #FFFFFF; /* White */
-            font-family: 'Space Grotesk', sans-serif;
+        [data-testid="stAppViewContainer"] {            
+            background: linear-gradient(45deg,#61096B, #840984, #630970, #48085F);
         }
-
-        .title {
-            font-family: 'Space Grotesk';
-            margin-top: -1.5rem !important;
-            font-size: 30px;
-            font-weight: bold;
-            padding-bottom: 0.5em;
+        [data-testid="stHeader"]{   
+            background: linear-gradient(45deg, #370849, #2F095A, #16096B);
+        }
+        [data-testid=stSidebar] {
+            background: linear-gradient(#370849, #2F095A, #16096B);
+        }
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 0px;
+        }
+        .stTabs [data-baseweb="tab"] {
+            max-width: 100%; /* Adjust this value to your needs */
+            height: 50px;
+            background: linear-gradient(45deg,#840984, #630970, #48085F);
+            border-radius: 4px 4px 0px 0px;
+            gap: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 76px;
+            padding-right: 76px;
+            margin-bottom: -2px;
+            color: #FFFFFF;
+            font-size: 24px;
+        }
+        .stTabs [aria-selected="true"] {
+            background-color: linear-gradient(45deg,#2E085F, #14085F, #08145F);
+        }
+        .block-container {
+            color: #290B35; /* White */
+            font-family: 'Space Grotesk', sans-serif;
+            margin-right: auto; /* Centers the container when its width is less than max-width */
+            margin-left: auto;
         }
         .subtitle {
             font-family: 'Space Grotesk';
             font-size: 24px;
             font-weight: bold;
-            padding-bottom: 0.5em;
-            margin-bottom: -0.5em;
+            padding-bottom: 0em;
+            margin-bottom: 0em;
         }
         ul {
             font-family: 'Space Grotesk';
-            font-size: 20px;
+            font-size: 23px;
             margin-top: 0.5em;
-            margin-bottom: 1em;
+            margin-bottom: 0em;
         }
     </style>
     """
+    
     st.markdown(style, unsafe_allow_html=True)
+    # Create two columns. The first column will take up 65% of the screen, and the second column will take up the remaining 35%.
+    col1, col2 = st.columns([60,50])
 
+    # Add content to the first column.
+    with col1:
+        st.markdown("""
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+                .block-container {
+                    margin-top: 1rem;
+                    padding-top: 2rem;
+                    padding-bottom: 0.5rem;
+                    color: #ECBCEC; 
+                    font-family: 'Courgette', cursive;
+                    text-align: center;
+                    height: 10vh;
+                }
+                .big-font {
+                    font-size:100px !important;
+                    font-family: 'Courgette', cursive;
+                    margin-bottom: -1rem !important;
+                    padding-top=-5rem;
+                }
+                .small-font{
+                    font-size: 38px !important;
+                    font-family: 'Courgette';
+                }
+                .new-text{
+                    color: #FC3FFC;
+                }
+                .new-text2{
+                    color: #F792F7;
+                }
+            </style>
+            <div class="big-font"><b>Hi, I'm <span class="new-text">Jophy</span></b></div>
+            <div class="small-font"><span class="new-text2"><b>Sophomore in Manalapan High School's Science and Engineering Magnet Program </span></b></div>
+        """, unsafe_allow_html=True)
 
-    st.markdown("""
-        <div class="section">
-            <div class="subtitle">Academic Focus:</div>
-        </div>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+            <div class="section">
+                <ul>
+                    <b>With a natural curiosity and a passion for problem-solving, my interests lie in utilizing biomedical engineering, AI, and finance to create impactful innovations. This website is just the first chapter of my story, with each tab unfolding a different facet. So, feel free to explore and discover the person behind the code and the unwavering drive to innovate. </b>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
 
-    st.markdown("""
-        <div class="section">
-            <div class="subtitle">Projects:</div>
-        </div>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+            <div class="section">
+                <div class="subtitle"><span class="new-text2"><b>Contact me at: jophy2467@gmail.com </span></b> </div>
+        
+            </div>
+        """,  unsafe_allow_html=True)
 
-    st.markdown("""
-        <div class="section">
-            <div class="subtitle">Achievements and Awards:</div>
-            
-        </div>
-    """,  unsafe_allow_html=True)
+    # Add an image to the second column.
+    with col2:
+        st.image('https://assets-global.website-files.com/64a383adeb16ab63d6b7ef95/64a3aa73a25bdfc44785aced_Virus.svg')
+        
+    # Add a spacer at the end of the content.
+    st.markdown("<div style='height:-800px;'></div>", unsafe_allow_html=True)
 
-    st.markdown("""
-        <div class="section">
-            <div class="subtitle">Extracirricular Activities:</div>
-            
-        </div>
-    """,  unsafe_allow_html=True)
-
-    st.markdown("""
-        <div class="section">
-            <div class="subtitle">School Activities:</div>
-            
-        </div>
-    """,  unsafe_allow_html=True)
-
-    st.markdown("""
-        <div class="section">
-            <div class="subtitle">Future Goals:</div>
-            
-        </div>
-    """,  unsafe_allow_html=True)
-
-    st.markdown("""
-        <div class="section">
-            <div class="subtitle">Contact me:</div>
-            <ul>
-                Feel free to reach out to me via email at jophy2467@gmail.com. I'm excited to connect and discuss shared interests, collaborations, or any inquiries you may have.
-        </div>
-    """,  unsafe_allow_html=True)
-
-
-#################################### college ready ####################################
+#"About me" tab
 with tabs[1]:
-        st.markdown("##### Projects I've Worked On")
-        # Program Overview
-        st.markdown("<h2 style='font-size: 36px; margin-bottom: 0;'>AI Education Program for High School Students</h2>", unsafe_allow_html=True)
-        st.markdown("<h3 style='font-size: 24px; margin-top: 0;'>Program Overview</h3>", unsafe_allow_html=True)
+    style = """
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+        .block-container {
+            color: #290B35; /* White */
+            font-family: 'Space Grotesk', sans-serif;
+            margin-right: auto; /* Centers the container when its width is less than max-width */
+            margin-left: auto;
+        }
+        .subtitle {
+            font-family: 'Space Grotesk';
+            font-size: 24px;
+            font-weight: bold;
+            padding-bottom: 0em;
+            margin-bottom: 0em;
+        }
+        ul {
+            font-family: 'Space Grotesk';
+            font-size: 23px;
+            margin-top: 0.5em;
+            margin-bottom: 0em;
+        }
+    </style>
+    """
+    st.markdown("""
+        <div style="text-align: center;">
+            <div class="small-font" style="display: inline-block; border-radius: 20px 20px 20px 20px; color: #F9D9FD; background: rgba(232, 170, 239, 0.3); padding-left: 40px; padding-right: 40px;" >
+                <b>About Me</b>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Add a spacer
+    st.markdown("<br>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns(3)
 
+    with col1:
         st.markdown("""
-        Our AI Education Program for High School Students is designed to provide an engaging and challenging curriculum that will introduce students to the exciting world of artificial intelligence. Through a series of hands-on projects and activities, students will learn the fundamentals of AI and machine learning and gain practical experience using cutting-edge technologies.
+            <div style="background-color: rgba(214, 140, 240, 0.3); padding: 10px; border-radius: 20px;">
+                <ul><b>Background</b></ul>
+                <ul>Hi, I'm Jophy, a sophomore enrolled in the Science and Engineering Magnet Program at Manalapan High School. I have a passion for exploring the intersections of science, technology, and finance. Since third grade, I've immersed myself in the world of music, playing both the piano and violin. Beyond academics, I enjoy teaching kids to code and contribute my time as a volunteer at my county museum.</ul>
+            </div>
+        """, unsafe_allow_html=True)
 
-        Our program is taught by experienced AI professionals who are passionate about sharing their knowledge and expertise with the next generation of innovators. With a focus on real-world applications and problem-solving, students will develop critical thinking skills and gain a competitive edge in college and beyond.
-
-        Here are some key highlights of our program:
-        """)
-
-        # Program Details
-        st.markdown("<h3 style='font-size: 24px;'>Program Details</h3>", unsafe_allow_html=True)
-
-        # Goal
-        st.markdown("<h4 style='font-size: 18px;'>Goal</h4>", unsafe_allow_html=True)
+    with col2:
         st.markdown("""
-        - Introduce students to the fundamentals of AI and machine learning
-        - Develop critical thinking skills and problem-solving abilities
-        - Provide practical experience using cutting-edge AI technologies
-        """)
+            <div style="background-color: rgba(197, 140, 240, 0.3); padding: 10px; border-radius: 20px;">
+                <ul><b>Classes Taken</b></ul>
+                <ul>Enrolled in a rigorous program, I've taken classes such as:</ul>
+                <ul>2022-2023: AP Biology, AP Microeconomics, Computer Programming and Engineering Design, Honors Algebra 2</ul>
+                <ul>2023-present: AP Statistics, AP Chemistry, AP U.S. Government and Politics, AP Macroecomics, AP Precalculus, AP Chinese Language and Culture</ul>
+            </div>
+        """, unsafe_allow_html=True)
 
-        # Who
-        st.markdown("<h4 style='font-size: 18px;'>Who</h4>", unsafe_allow_html=True)
+    with col3:
         st.markdown("""
-        - High school students who are interested in computer science and technology
-        - Students who want to gain a competitive edge in college and beyond
-        - Students who are passionate about innovation and problem-solving
-        """)
+            <div style="background-color: rgba(170, 140, 240, 0.3); padding: 10px; border-radius: 20px;">
+                <ul><b>Future Goals</b></ul>
+                <ul>Looking ahead, my aspirations extend into the realms of biomedical engineering, AI, and finance. My ultimate goal is to pursue it in college, where I hope to weave them together to make a positive impact on the world. Whether through innovative technologies, sustainable finance practices, or ethical AI solutions, I am committed to contributing to positive change and improvement.</ul>
+            </div>
+        """, unsafe_allow_html=True)
 
-        # When we teach
-        st.markdown("<h4 style='font-size: 18px;'>When We Teach</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program is offered on a rolling basis throughout the year
-        - Students can enroll at any time and complete the program at their own pace
-        - All materials and resources are available online, 24/7
-        """)
 
-        # How we teach
-        st.markdown("<h4 style='font-size: 18px;'>How We Teach (Project-Driven)</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program is project-driven, with a focus on real-world applications and problem-solving
-        - Students will work on a series of hands-on projects and activities that will help them develop practical skills and gain experience with cutting-edge AI technologies
-        - Projects are designed to be challenging and engaging, encouraging students to think creatively and work collaboratively
-        """)
-
-        # What will student learn
-        st.markdown("<h4 style='font-size: 18px;'>What Will Students Learn</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - The fundamentals of AI and machine learning
-        - Practical experience using cutting-edge AI technologies
-        - Critical thinking and problem-solving skills
-        - Collaboration and teamwork
-        - Effective communication and presentation skills
-        - A competitive edge in college and beyond
-        """)
-
-        # College Application
-        st.markdown("<h4 style='font-size: 24px;'>College Application</h4>", unsafe_allow_html=True)
-        st.markdown("""Our AI education program for high school students provides an excellent opportunity for students to explore AI technologies and their real-world applications.
-        By participating in our program, students will develop hands-on experience in developing AI solutions, learn how to think critically about AI's impact on society,
-        and prepare themselves for college and future careers in AI and related fields. We invite all high school students who are interested in AI to join our program
-        and take the first step towards becoming AI experts.""")
-
-#################################### on-demand ####################################
+#"Awards" tab
 with tabs[3]:
-        st.markdown("##### Extracirricular Activities")
-        # Program Overview
-        st.markdown("<h2 style='font-size: 36px; margin-bottom: 0;'>On-demand, Per-Request Training and Consulting Program</h2>", unsafe_allow_html=True)
-        st.markdown("<h3 style='font-size: 24px; margin-top: 0;'>Program Overview</h3>", unsafe_allow_html=True)
+    style = """
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+        .block-container {
+            color: #290B35; /* White */
+            font-family: 'Space Grotesk', sans-serif;
+            padding-left: 5em;
+            padding-right: -5em;
+            height: 100vh;
+        }
+        .subtitle {
+            font-family: 'Space Grotesk';
+            font-size: 24px;
+        }
+        ul {
+            font-family: 'Space Grotesk';
+            font-size: 23px;
+            margin-top:0;
+            
+        }
+    </style>
+    """
+    st.markdown("""
+        <div style="text-align: center;">
+            <div class="small-font" style="display: inline-block; border-radius: 20px 20px 20px 20px; color: #F9D9FD; background: rgba(232, 170, 239, 0.3); padding-left: 40px; padding-right: 40px;" >
+                <b>Achievements and Awards</b>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Add a spacer
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    st.markdown("""
+        <div style="display: flex; justify-content: space-between;">
+            <div style="background-color: rgba(214, 140, 240, 0.3); padding-left: 15px; padding-right: 15px; padding-top:1px; padding-bottom: 1px; border-radius: 20px; text-align: left; width: 49%;">
+                <ul><b>STEM Awards:</b></ul>
+                <div style="text-align: left; word-wrap: break-word; max-width: 75%; float: left;">
+                    <ul>January 2023: HackFRee Hack of Distinction
+                        <li>Participated in school district's annual 24-hour hackathon</li>
+                        <li>Project was Nook to Nest, which focused on helping out displaced people in cases of natural disasters</li>
+                    </ul>
+                </div>
+                <div style="text-align: right; direction: rtl; padding-right: 30px; word-wrap: break-word; max-width: 80%; float:right;">
+                    <ul>July 2023: Best Research Presentation Third Place
+                        <li>Participated in a research academy that accepts around 50 students nationally, held at Princeton University</li>
+                        <li>Project was focused on reducing climate change and carbon emissions through using AI algorithms to minimize data storage </li>
+                    </ul>
+                </div>
+                <div style="text-align: left; word-wrap: break-word; max-width: 75%; float: left;">
+                    <ul>August 2023: Student Engineering Creativity Convention (SECC) Third Place
+                        <li>Worked in a team of 5 to train an autonomous AWS DeepRacer model using reinforcement learning</li>
+                        <li>Presented results at the University of Texas at Dallas to a panel of judges</li>
+                    </ul>
+                </div>
+                <div style="text-align: right; direction: rtl; padding-right: 20px; word-wrap: break-word; max-width: 80%; float: right;">
+                    <ul>December 2023: World AI Competition for Youth (WAICY) AI Showcase Track Finalist
+                        <li>Participated in the world's largest AI competition for youth, with 3200+ participants across 58+ countries and 600+ projects in 2022</li>
+                        <li>Project was NutriGuide, which was an application that utilizes a trained YOLO object detection model and OpenAI API to give tailored nutritional insights </li>
+                    </ul>
+                </div>
+                <div style="text-align: left;word-wrap: break-word; max-width: 75%; float: left;">
+                    <ul>December 2023: World AI Competition for Youth (WAICY) Generative Art Track Fourth Place
+                        <li>Project involved documenting thought process and steps to create AI-generated art based on the theme, "Joys of Family"</li>
+                        <li>Special WAICY award cateogry</li>
+                    </ul>
+                </div> 
+                <div style="text-align: right; direction: rtl; padding-right: 20px; word-wrap: break-word; max-width: 80%; float: right;">
+                    <ul>December 2023: National STEM Challenge Finalist
+                        <li>Participated in the nation's largest STEM challenge, utilized project NutriGuide</li>
+                        <li>Prize: 2-months of Codédex Club, and an Invitation to attend an EXPLR’s Private STEM Master Classes Series </li>
+                    </ul>
+                </div>
+                <div style="text-align: left;word-wrap: break-word; max-width: 75%; float: left;">
+                    <ul>December 2023: NJ04 Congressional App Challenge Honorable Mention
+                        <li>Project was CultureConnect, which utilized various technologes such as NLP to connect users from different regions in the world, enhancing their cultural awareness and language abilities</li>
+                        <li>Received signed letter and certificate from congressional representative</li>
+                    </ul>
+                </div> 
+                <div style="clear: both;"></div>    
+            </div>
+            <div style="background-color: rgba(197, 140, 240, 0.3); padding-left: 15px; padding-right: 15px; padding-top:1px; padding-bottom: 1px; border-radius: 20px; text-align: left; width: 49%;">
+                <ul><b>Music and Other Awards:</b></ul>
+                <div style="text-align: right; direction: rtl; padding-right: 30px; word-wrap: break-word; max-width: 80%; float:right;">
+                    <ul>June 2021: ABRSM Music Theory Grade 5 with Distinction
+                        <li>Score: 70/75</li>
+                    </ul>
+                </div>
+                <div style="text-align: left; word-wrap: break-word; max-width: 75%; float: left;">
+                    <ul>February 2022: International Music and Arts Society (IMAS) Talented Young Musician Olympia Gold in Violin
+                        <li>Invited to perform at Merkin Concert Hall in New York City</li>
+                    </ul>
+                </div>
+                <div style="text-align: right; direction: rtl; padding-right: 30px; word-wrap: break-word; max-width: 80%; float:right;">
+                    <ul>March 2022: ABRSM Piano Performance Grade 8 with Distinction
+                        <li>Score: 137/150</li>
+                    </ul>
+                </div>
+                <div style="text-align: left; word-wrap: break-word; max-width: 75%; float: left;">
+                    <ul>May 2023: Gold Presidential Volunteer Service Award
+                        <li>Over 100 hours of volunteer work</li>
+                    </ul>
+                </div>
+                <div style="text-align: right; direction: rtl; padding-right: 30px; word-wrap: break-word; max-width: 80%; float:right;">
+                    <ul>September 2023: ABRSM Violin Performance Grade 8 </ul>
+                </div>
+                <div style="text-align: left; word-wrap: break-word; max-width: 75%; float: left;">
+                    <ul>January 2024: Gold Presidential Volunteer Service Award
+                        <li>Over 100 hours of volunteer work</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
 
-        st.markdown("""
-        At our on-demand training program, we understand that everyone's learning needs are unique. That's why we offer a customizable and flexible approach to learning. With our program, you can choose the technology you want to learn and our experts will teach you based on your specific needs.
-        """)
-
-        # Program Details
-        st.markdown("<h3 style='font-size: 24px;'>How it works:</h3>", unsafe_allow_html=True)
-
-        # Goal
-        st.markdown("<h4 style='font-size: 18px;'>Goal</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our on-demand training program is designed to help you stay ahead of the curve in the rapidly-evolving field of technology, and to give you the skills and knowledge you need to succeed in your career.
-        - Whether you are looking to advance in your current job or explore new career opportunities, our program can help you achieve your goals.
-        - By participating in our program, you will join a community of like-minded learners who are passionate about technology and committed to lifelong learning.
-        """)
-
-        # Who
-        st.markdown("<h4 style='font-size: 18px;'>Who</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our on-demand training program is designed for individuals who are interested in expanding their knowledge and skills in the field of technology, including AI and other state-of-the-art technologies.
-        - Whether you are a student, a working professional, or simply someone who wants to stay ahead of the curve, our program is perfect for anyone who wants to learn and grow in their career.
-        - Our program is open to anyone, regardless of their prior experience or education level.
-        """)
-
-        # When we teach
-        st.markdown("<h4 style='font-size: 18px;'>When We Teach</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program is offered on a rolling basis throughout the year
-        - Students can enroll at any time and complete the program at their own pace
-        - All materials and resources are available online, 24/7
-        """)
-
-        # what
-        st.markdown("<h4 style='font-size: 18px;'>What</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program offers a wide range of topics to choose from, including AI, automation, main stream technologies, and expert help and consulting.
-        - With our program, you can choose which topic you want to learn and bid on the price you are willing to pay. Our experts will then work with you to design a personalized training program that meets your specific needs and goals.
-        - You will have access to high-quality learning materials, including videos, tutorials, and hands-on projects, all designed to help you master the topic of your choice.
-        """)
-
-        # how
-        st.markdown("<h4 style='font-size: 18px;'>How</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program is entirely on-demand, which means you can learn at your own pace and on your own schedule.
-        - You will have access to our team of expert instructors, who will provide personalized guidance and support throughout your learning journey.
-        - Our program is designed to be interactive and engaging, with plenty of opportunities for hands-on learning and collaboration with other learners.
-        """)
-
-        # on-demand
-        st.markdown("<h4 style='font-size: 24px;'>On-demand, per-request or consulting</h4>", unsafe_allow_html=True)
-        st.markdown("""At our on-demand training program, we are committed to helping individuals and businesses succeed in the rapidly changing world of technology.
-        Whether it's AI, automation, web development, mobile app development, or expert help and consulting, we have the expertise and resources to help our customers achieve their learning goals.""")
-
-
-
-#################################### math and programming ####################################
-with tabs[2]:
-        st.markdown("##### Achievements and Awards")
-        # Program Overview
-        st.markdown("<h2 style='font-size: 36px; margin-bottom: 0;'>Programming and Math Together for K-12 Students</h2>", unsafe_allow_html=True)
-        st.markdown("<h3 style='font-size: 24px; margin-top: 0;'>Program Overview</h3>", unsafe_allow_html=True)
-
-        st.markdown("""
-        Our program combines the power of technology, programming, and math to create a unique learning experience for K-12 students. Small class sizes and flexible scheduling ensure that every student gets the attention and support they need to succeed.
-        """)
-
-        # Program Details
-        st.markdown("<h3 style='font-size: 24px;'>How it works:</h3>", unsafe_allow_html=True)
-
-
-        # Who
-        st.markdown("<h4 style='font-size: 18px;'>Who</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - The program is designed for all K-12 students who are interested in developing their programming and math skills.
-        - Students with no prior experience in programming or math are welcome to join the program.
-        - Our instructors are experienced in teaching students of all ages and skill levels.
-        """)
-
-        # What
-        st.markdown("<h4 style='font-size: 18px;'>What</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program combines programming and math to create a unique learning experience that will help students develop problem-solving, critical thinking, and analytical skills.
-        - We cover topics such as coding fundamentals, algorithms, data structures, and mathematical concepts such as algebra, geometry, and calculus.
-        - Our program uses project-based learning to engage students and help them apply their skills to real-world problems.
-        """)
-
-        # How
-        st.markdown("<h4 style='font-size: 18px;'>How</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program is designed to be flexible and adaptable to each student's needs and interests.
-        - We offer small class sizes, which allow our instructors to provide personalized attention and support to each student.
-        - Our program is offered both online and in-person, with a range of scheduling options to fit any student's schedule.
-        """)
-
-        # how
-        st.markdown("<h4 style='font-size: 18px;'>Why</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - We believe that programming and math are essential skills for the future and can provide students with many opportunities for personal and professional growth.
-        - By combining programming and math, we help students develop a unique skill set that will set them apart in a competitive job market.
-        - Our program provides a supportive and encouraging learning environment where students can explore their interests and reach their full potential.
-        """)
-
-        # on-demand
-        st.markdown("<h4 style='font-size: 24px;'>Math Is Programming? or Programming Is Math?</h4>", unsafe_allow_html=True)
-        st.markdown("""Our Tech Programming and Math Together program is designed to provide K-12 students with a unique and engaging learning experience. By combining programming and math, we aim to foster critical thinking, problem-solving, and creativity skills in our students. Our small class sizes and flexible schedule allow students to receive personalized attention and learn at their own pace. Our experienced instructors guide students through hands-on projects and real-world applications, giving them the skills and knowledge they need to succeed in a rapidly evolving tech industry.
-
-Whether your child is just starting out in their programming and math journey or looking to take their skills to the next level, our program has something to offer. We believe that by inspiring the next generation of tech innovators, we can help shape a better future for everyone.""")
-
+#"Extracirricular/School Activities" tab
 with tabs[4]:
-        st.markdown("##### School Activities")
-        # Program Overview
-        st.markdown("<h2 style='font-size: 36px; margin-bottom: 0;'>On-demand, Per-Request Training and Consulting Program</h2>", unsafe_allow_html=True)
-        st.markdown("<h3 style='font-size: 24px; margin-top: 0;'>Program Overview</h3>", unsafe_allow_html=True)
+    style = """
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+        .block-container {
+            color: #290B35; /* White */
+            font-family: 'Space Grotesk', sans-serif;
+            padding-left: 5em;
+            padding-right: -5em;
+            height: 100vh;
+        }
+        .subtitle {
+            font-family: 'Space Grotesk';
+            font-size: 24px;
+        }
+        ul {
+            font-family: 'Space Grotesk';
+            font-size: 23px;
+            margin-top:0;
+        }
+    </style>
+    """
+    st.markdown("""
+        <div style="text-align: center;">
+            <div class="small-font" style="display: inline-block; border-radius: 20px 20px 20px 20px; color: #F9D9FD; background: rgba(232, 170, 239, 0.3); padding-left: 40px; padding-right: 40px;" >
+                <b>Extracirricular/School Activities</b>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
 
+    # Add a spacer
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Create two columns
+    col1, col2 = st.columns([3,1])
+
+    # First column
+    with col1:
         st.markdown("""
-        At our on-demand training program, we understand that everyone's learning needs are unique. That's why we offer a customizable and flexible approach to learning. With our program, you can choose the technology you want to learn and our experts will teach you based on your specific needs.
-        """)
+            <div style="background-color: rgba(214, 140, 240, 0.3); padding-left: 15px; padding-right: 15px; padding-top:1px; padding-bottom: 1px; border-radius: 20px; text-align: left; width: 100%; display: flex; flex-direction: column;">
+                <ul><b>School Activities:</b></ul>
+                <ul>In my school community, I've taken part in various activites, such as:
+                    <li>First Tech Robotics (FTC) Competition Team Member: Collaborating with a team within the Robotics Club to actively participate in ongoing FTC competitions. Currently serving in the software department, contributing to the development and optimization of code for robotic systems</li>
+                    <li>Computer Science Club Co-President: Instruct high school students in coding skills, equipping them for participation and success in coding competitions</li>
+                    <li>HackFRee Leadership Team Member and Mentor: Collaborating in the planning and execution of the district's annual hackathon and providing mentorship to young coding enthusiasts</li>
+                    <li>Bravecast Anchor: Anchor for the recorded segments of the school's weekly news broadcast</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)
 
-        # Program Details
-        st.markdown("<h3 style='font-size: 24px;'>How it works:</h3>", unsafe_allow_html=True)
+    # Second column
+    with col2:
+        # List of image URLs or local image paths
+        image= "https://www.frhsd.com/cms/lib/NJ01912687/Centricity/Template/GlobalAssets/images///Logos/MAN%20Emboss.png"
 
-        # Goal
-        st.markdown("<h4 style='font-size: 18px;'>Goal</h4>", unsafe_allow_html=True)
+        st.image(image, width=320)  # Adjust width as needed
+
+    # Add a spacer
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    col3, col4 = st.columns([1,2])
+    
+        # Second column
+    with col3:
+        # List of image URLs or local image paths
+        images = ["https://us.123rf.com/450wm/grgroup/grgroup1707/grgroup170701171/81583377-blue-shading-silhouette-of-programming-window-with-script-of-code-vector-illustration.jpg?ver=6", 
+                "https://media.istockphoto.com/id/1210803911/vector/people-working-together-hackathon-vector-flat-illustration-programmers-work-with-data.jpg?s=612x612&w=0&k=20&c=yoTjL26kAyCebnpuA-DelwoSOf1EBmazkl8HKragWTw=",
+                "https://pbs.twimg.com/profile_images/621358312739762176/70SLpg5g_400x400.png",
+                "https://media.istockphoto.com/id/1283924155/vector/cartoon-violin-and-bow.jpg?s=612x612&w=0&k=20&c=x9-AZhdk2Ff6f-cgzfrfKCDDtJgwFnq6OxpRNhHaLxs="]
+
+        for i in range(0, len(images), 2):
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown(f'<img src="{images[i]}" style="border-radius: 20px; width: 220px">', unsafe_allow_html=True)
+            if i + 1 < len(images):
+                with col2:
+                    st.markdown(f'<img src="{images[i+1]}" style="border-radius: 20px; width: 220px">', unsafe_allow_html=True)
+            st.markdown("<br>", unsafe_allow_html=True)  # Add a line break after each pair of images
+            
+    with col4:
         st.markdown("""
-        - Our on-demand training program is designed to help you stay ahead of the curve in the rapidly-evolving field of technology, and to give you the skills and knowledge you need to succeed in your career.
-        - Whether you are looking to advance in your current job or explore new career opportunities, our program can help you achieve your goals.
-        - By participating in our program, you will join a community of like-minded learners who are passionate about technology and committed to lifelong learning.
-        """)
-
-        # Who
-        st.markdown("<h4 style='font-size: 18px;'>Who</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our on-demand training program is designed for individuals who are interested in expanding their knowledge and skills in the field of technology, including AI and other state-of-the-art technologies.
-        - Whether you are a student, a working professional, or simply someone who wants to stay ahead of the curve, our program is perfect for anyone who wants to learn and grow in their career.
-        - Our program is open to anyone, regardless of their prior experience or education level.
-        """)
-
-        # When we teach
-        st.markdown("<h4 style='font-size: 18px;'>When We Teach</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program is offered on a rolling basis throughout the year
-        - Students can enroll at any time and complete the program at their own pace
-        - All materials and resources are available online, 24/7
-        """)
-
-        # what
-        st.markdown("<h4 style='font-size: 18px;'>What</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program offers a wide range of topics to choose from, including AI, automation, main stream technologies, and expert help and consulting.
-        - With our program, you can choose which topic you want to learn and bid on the price you are willing to pay. Our experts will then work with you to design a personalized training program that meets your specific needs and goals.
-        - You will have access to high-quality learning materials, including videos, tutorials, and hands-on projects, all designed to help you master the topic of your choice.
-        """)
-
-        # how
-        st.markdown("<h4 style='font-size: 18px;'>How</h4>", unsafe_allow_html=True)
-        st.markdown("""
-        - Our program is entirely on-demand, which means you can learn at your own pace and on your own schedule.
-        - You will have access to our team of expert instructors, who will provide personalized guidance and support throughout your learning journey.
-        - Our program is designed to be interactive and engaging, with plenty of opportunities for hands-on learning and collaboration with other learners.
-        """)
-
-        # on-demand
-        st.markdown("<h4 style='font-size: 24px;'>On-demand, per-request or consulting</h4>", unsafe_allow_html=True)
-        st.markdown("""At our on-demand training program, we are committed to helping individuals and businesses succeed in the rapidly changing world of technology.
-        Whether it's AI, automation, web development, mobile app development, or expert help and consulting, we have the expertise and resources to help our customers achieve their learning goals.""")
+            <div style="background-color: rgba(170, 140, 240, 0.3); padding-left: 15px; padding-right: 15px; padding-top:1px; padding-bottom: 1px; border-radius: 20px; text-align: left; width: 100%; display: flex; flex-direction: column;">
+                <ul><b>Extracirricular Activities:</b></ul>
+                <ul>Outside of school, I take part in various activities around my community, which include: </li>
+                    <li>Computer Science Instructor and Teaching Assistant: Served as a teaching assistant since the age of 13 and conducted Office Hours to help students from diverse coding experiences and backgrounds, ranging from beginners in elementary school to advanced students preparing for the AP Computer Science A exam in May. Started as an instructor at the age of 15, where I teach Computer Science to students in languages such as Java and Python and monitor student progress to report to parents and staff</li>
+                    <li>Hackathon Judge and Mentor: Helped organize and judge for the Computer Science Academy's hackathon
+                    <li>Docent at the Monmouth Musuem: Tour guide for my county's museum, where I lead tours for visitors and help out with various events</li>
+                    <li>Director of Science at the International Youth STEM Society: Help come up with 8 workshop ideas to conduct in my local community each month, advocating for accessibility to STEM</li>
+                    <li>Violinist for the New Jersey State Youth Orchestra: Meet up weekly to rehease and perform for the community as a part of the Chamber Ensemble</li>
+                </ul>
+            </div>
+        """, unsafe_allow_html=True)

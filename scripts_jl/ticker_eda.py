@@ -176,7 +176,7 @@ def plot_it_sma(ticker, interval, base_price,win_1, win_2, df_, N_ticks=40):
     sns.lineplot(data=df_, x="Date", y=price3, label=price3)
     plt.xlabel('Time')
     plt.ylabel('Price')
-    plt.title(f"{ticker}'s Simiple Moving Average (SMA) of {base_price} Price by {interval}", fontsize=8)
+    plt.title(f"{ticker}'s Simple Moving Average (SMA) of {base_price} Price by {interval}", fontsize=8)
     plt.grid()
 
     every_n_ticks = int(df_.shape[0]/N_ticks)+1
