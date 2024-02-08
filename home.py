@@ -128,9 +128,9 @@ with tabs[0]:
             </div>
         """,  unsafe_allow_html=True)
 
-    Add an image to the second column.
-    with col2:
-        st.image('https://assets-global.website-files.com/64a383adeb16ab63d6b7ef95/64a3aa73a25bdfc44785aced_Virus.svg')
+    # Add an image to the second column.
+    #with col2:
+        #st.image('https://assets-global.website-files.com/64a383adeb16ab63d6b7ef95/64a3aa73a25bdfc44785aced_Virus.svg')
         
     # Add a spacer at the end of the content.
     st.markdown("<div style='height:-800px;'></div>", unsafe_allow_html=True)
@@ -370,12 +370,12 @@ with tabs[4]:
             </div>
         """, unsafe_allow_html=True)
 
-    Second column
-    with col2:
+    # Second column
+    #with col2:
         # List of image URLs or local image paths
-        image= "https://www.frhsd.com/cms/lib/NJ01912687/Centricity/Template/GlobalAssets/images///Logos/MAN%20Emboss.png"
+        #image= "https://www.frhsd.com/cms/lib/NJ01912687/Centricity/Template/GlobalAssets/images///Logos/MAN%20Emboss.png"
 
-        st.image(image, width=320)  # Adjust width as needed
+        #st.image(image, width=320)  # Adjust width as needed
 
     # Add a spacer
     st.markdown("<br>", unsafe_allow_html=True)
@@ -383,21 +383,21 @@ with tabs[4]:
     col3, col4 = st.columns([1,2])
     
         # Second column
-    with col3:
+    #with col3:
         # List of image URLs or local image paths
-        images = ["https://us.123rf.com/450wm/grgroup/grgroup1707/grgroup170701171/81583377-blue-shading-silhouette-of-programming-window-with-script-of-code-vector-illustration.jpg?ver=6", 
-                "https://media.istockphoto.com/id/1210803911/vector/people-working-together-hackathon-vector-flat-illustration-programmers-work-with-data.jpg?s=612x612&w=0&k=20&c=yoTjL26kAyCebnpuA-DelwoSOf1EBmazkl8HKragWTw=",
-                "https://pbs.twimg.com/profile_images/621358312739762176/70SLpg5g_400x400.png",
-                "https://media.istockphoto.com/id/1283924155/vector/cartoon-violin-and-bow.jpg?s=612x612&w=0&k=20&c=x9-AZhdk2Ff6f-cgzfrfKCDDtJgwFnq6OxpRNhHaLxs="]
+        #images = ["https://us.123rf.com/450wm/grgroup/grgroup1707/grgroup170701171/81583377-blue-shading-silhouette-of-programming-window-with-script-of-code-vector-illustration.jpg?ver=6", 
+                #"https://media.istockphoto.com/id/1210803911/vector/people-working-together-hackathon-vector-flat-illustration-programmers-work-with-data.jpg?s=612x612&w=0&k=20&c=yoTjL26kAyCebnpuA-DelwoSOf1EBmazkl8HKragWTw=",
+                #"https://pbs.twimg.com/profile_images/621358312739762176/70SLpg5g_400x400.png",
+                #"https://media.istockphoto.com/id/1283924155/vector/cartoon-violin-and-bow.jpg?s=612x612&w=0&k=20&c=x9-AZhdk2Ff6f-cgzfrfKCDDtJgwFnq6OxpRNhHaLxs="]
 
-        for i in range(0, len(images), 2):
-            col1, col2 = st.columns(2)
-            with col1:
-                st.markdown(f'<img src="{images[i]}" style="border-radius: 20px; width: 220px">', unsafe_allow_html=True)
-            if i + 1 < len(images):
-                with col2:
-                    st.markdown(f'<img src="{images[i+1]}" style="border-radius: 20px; width: 220px">', unsafe_allow_html=True)
-        st.markdown("<br>", unsafe_allow_html=True)  # Add a line break after each pair of images
+        #for i in range(0, len(images), 2):
+            #col1, col2 = st.columns(2)
+            #with col1:
+                #st.markdown(f'<img src="{images[i]}" style="border-radius: 20px; width: 220px">', unsafe_allow_html=True)
+            #if i + 1 < len(images):
+                #with col2:
+                    #st.markdown(f'<img src="{images[i+1]}" style="border-radius: 20px; width: 220px">', unsafe_allow_html=True)
+        #st.markdown("<br>", unsafe_allow_html=True)  # Add a line break after each pair of images
             
     with col4:
         st.markdown("""
